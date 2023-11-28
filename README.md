@@ -88,23 +88,23 @@ www     IN A      10.1.0.50
 Edita la configuración de Apache (por ejemplo, httpd.conf o archivos de configuración en confApache) para configurar Virtual Hosts:
 
 ```bash 
-*<VirtualHost *:80>*
-*    ServerName www.fabulasoscuras.com*
-*    DocumentRoot /usr/local/apache2/htdocs/fabulasoscuras*
-*</VirtualHost>*
+<VirtualHost :80>
+    ServerName www.fabulasoscuras.com
+    DocumentRoot /usr/local/apache2/htdocs/fabulasoscuras
+</VirtualHost>
 
-*<VirtualHost *:80>*
-*    ServerName www.fabulasmaravillosas.com*
-*    DocumentRoot /usr/local/apache2/htdocs/fabulasmaravillosas*
-*</VirtualHost>*
+<VirtualHost :80>
+    ServerName www.fabulasmaravillosas.com
+    DocumentRoot /usr/local/apache2/htdocs/fabulasmaravillosas
+</VirtualHost>
 ```
+### 5. Prueba DirectoryIndex y Virtual Hosts
 
+Levanta los contenedores con Docker Compose:
 
+```bash 
+docker-compose up -d
 
-
-
-
-
-
-
+```
+Abre tu navegador y accede a http://www.fabulasoscuras.com y http://www.fabulasmaravillosas.com. Asegúrate de que las páginas se carguen correctamente.
 
